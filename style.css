@@ -1,0 +1,172 @@
+/* Reset & Base Styles */
+body {
+    margin: 0;
+    font-family: 'Fira Code', monospace;
+    background: linear-gradient(to bottom right, #0f172a, #1e293b);
+    color: #e2e8f0;
+  }
+  .container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+  }
+  
+  /* Navigation */
+  .nav {
+    background: #0f172a;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  }
+  .logo {
+    color: #38bdf8;
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  nav a {
+    color: #94a3b8;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  nav a:hover {
+    color: #38bdf8;
+  }
+  
+  /* Hero */
+  .hero {
+    padding: 100px 0;
+    text-align: center;
+    animation: fadeIn 2s ease;
+  }
+  .highlight {
+    color: #38bdf8;
+    animation: slideIn 1s ease-in-out;
+  }
+  .btn {
+    margin-top: 1rem;
+    padding: 10px 20px;
+    background: #38bdf8;
+    color: #0f172a;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s ease;
+  }
+  .btn:hover {
+    background: #0ea5e9;
+  }
+  
+  /* Sections */
+  section {
+    padding: 80px 0;
+    animation: fadeInUp 1s ease;
+  }
+  
+  /* Projects */
+  .project {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+  }
+  .project:hover {
+    transform: translateY(-5px);
+    background: #334155;
+  }
+  
+  /* Skills */
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  .skills-list li {
+    background: #1e293b;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+  }
+  .skills-list li:hover {
+    transform: scale(1.05);
+    background: #334155;
+  }
+  
+  /* Contact */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  input, textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background: #334155;
+    color: #f1f5f9;
+  }
+  button[type="submit"] {
+    background: #38bdf8;
+    color: #0f172a;
+    padding: 10px;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  button[type="submit"]:hover {
+    background: #0ea5e9;
+  }
+  
+  /* Footer */
+  footer {
+    padding: 20px 0;
+    text-align: center;
+    background: #0f172a;
+    margin-top: 50px;
+  }
+  .social a {
+    margin: 0 10px;
+    color: #94a3b8;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  .social a:hover {
+    color: #38bdf8;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes slideIn {
+    from { transform: translateX(-30px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+      gap: 10px;
+    }
+    .hero {
+      padding: 60px 20px;
+    }
+    section {
+      padding: 60px 20px;
+    }
+  }
+  
